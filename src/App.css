@@ -1,5 +1,21 @@
+body {
+  min-width: 375px; /* your desired width */
+  max-width: 100%;
+  min-height: 500px;
+  max-height: 100%;
+  position: relative;
+  vertical-align:center;
+  
+  /*background-color: #282c34;*/
+}
+
 .App {
   text-align: center;
+  /*background-color: #282c34; */
+}
+
+.list-group-item {
+  padding: 1rem 1.5rem !important;
 }
 
 .App-logo {

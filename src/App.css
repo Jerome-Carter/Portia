@@ -5,9 +5,17 @@ body {
   max-height: 100%;
   position: relative;
   vertical-align:center;
+  
+  /*background-color: #282c34;*/
 }
+
 .App {
   text-align: center;
+  /*background-color: #282c34; */
+}
+
+.list-group-item {
+  padding: 1rem 1.5rem !important;
 }
 
 .App-logo {

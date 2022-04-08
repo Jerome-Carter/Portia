@@ -3,27 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Nav } from 'react-bootstrap/';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Nav variant="tabs" defaultActiveKey="/home">
-      <Nav.Item>
-        <Nav.Link href="/portfolios">Portfolios</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href="/assets">All Assets</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href="/news">News</Nav.Link>
-      </Nav.Item>
-    </Nav>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-      </Routes>
-    </BrowserRouter>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

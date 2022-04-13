@@ -1,11 +1,11 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "Portia",
   "description": "This extension is a starting point to create a real Chrome extension",
   "version": "0.0.1",
 
-  "browser_action": {
+  "action": {
     "default_popup": "index.html",
     "default_title": "Open the popup"
   },

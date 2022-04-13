@@ -1,0 +1,9 @@
+#block_container
+{
+    text-align:center;
+}
+#block1, #block2
+{
+    display:inline-block;
+}
+

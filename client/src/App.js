@@ -2,10 +2,11 @@ import './App.css';
 import Login from "./components/Login.js";
 import Portfolios from './components/Portfolios.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MemoryRouter, Routes, Route, Link } from "react-router-dom";
 import { Nav } from 'react-bootstrap/';
 import React, { createContext, useReducer } from 'react';
 import { initialState, reducer } from "./store/reducer";
+import Assets from './components/Assets';
 
 export const AuthContext = createContext();
 
@@ -14,31 +15,37 @@ function App() {
 
   return (
     <div className="App">
-      <Nav variant="tabs" defaultActiveKey="/portfolios">
-        <Nav.Item>
-          <Nav.Link href="/portfolios">Portfolios</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/assets">All Assets</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/news">News</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/login">Login</Nav.Link>
-        </Nav.Item>
-      </Nav>
+      
       <AuthContext.Provider
         value={{
           state,
           dispatch
         }}>
-        <BrowserRouter>
+        <MemoryRouter
+          initialEntries={["/portfolios"]}
+          initialIndex={0}
+        >
+
+        <Nav variant="tabs" defaultActiveKey="/portfolios">
+        <Nav.Item>
+          <Link className= "nav-link" to ="/portfolios">Portfolios</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link className= "nav-link" to ="/assets">All Assets</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href="/news">News</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link className= "nav-link" to = "/login">Login</Link>
+        </Nav.Item>
+      </Nav>
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/portfolios" element={<Portfolios />} />
+            <Route path="/assets" element={<Assets />} />
           </Routes>
-        </BrowserRouter>
+        </MemoryRouter>
       </AuthContext.Provider>
     </div>
   );

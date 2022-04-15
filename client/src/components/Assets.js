@@ -1,8 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ListGroup, Badge, Accordion, CardGroup } from 'react-bootstrap/';
-import AccordionItem from 'react-bootstrap/esm/AccordionItem';
-import Card from 'react-bootstrap/Card'
-import { useAccordionButton } from 'react-bootstrap/AccordionButton';
+import { ListGroup, Badge, Accordion} from 'react-bootstrap/';
 import './Portfolios.css';
 
 function Assets() {

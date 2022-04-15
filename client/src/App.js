@@ -7,6 +7,7 @@ import { Nav } from 'react-bootstrap/';
 import React, { createContext, useReducer } from 'react';
 import { initialState, reducer } from "./store/reducer";
 import Assets from './components/Assets';
+import News from './components/News';
 
 export const AuthContext = createContext();
 
@@ -34,7 +35,7 @@ function App() {
           <Link className= "nav-link" to ="/assets">All Assets</Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/news">News</Nav.Link>
+          <Link className= "nav-link" to = "/news">News</Link>
         </Nav.Item>
         <Nav.Item>
           <Link className= "nav-link" to = "/login">Login</Link>
@@ -44,6 +45,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/portfolios" element={<Portfolios />} />
             <Route path="/assets" element={<Assets />} />
+            <Route path="/news" element={<News />} />
           </Routes>
         </MemoryRouter>
       </AuthContext.Provider>

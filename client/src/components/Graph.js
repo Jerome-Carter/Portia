@@ -2,11 +2,11 @@ import React from 'react';
 import {Bar} from 'react-chartjs-2';
 
 const state = {
-  labels: ['January', 'February', 'March',
-           'April', 'May'],
+  labels: ['Temp1', 'Temp2', 'Temp3',
+           'Temp4', 'Temp5'],
   datasets: [
     {
-      label: 'Rainfall',
+      label: 'Title',
       backgroundColor: 'rgba(75,192,192,1)',
       borderColor: 'rgba(0,0,0,1)',
       borderWidth: 2,
@@ -24,7 +24,7 @@ export default class Graph extends React.Component {
           options={{
             title:{
               display:true,
-              text:'Average Rainfall per month',
+              text:'Temp text',
               fontSize:20
             },
             legend:{
